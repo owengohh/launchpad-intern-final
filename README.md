@@ -28,7 +28,7 @@ To install and run the project:
 1. Ensure you have Docker and Docker Compose installed on your system.
 2. Clone the repository to your local machine.
 3. Navigate to the project directory.
-4. Obtain the `.env` file from me and place it in the project root directory.
+4. Obtain the `.env` file from me and place it in the project `./app` directory.
 5. Run the following command:
 
    ```
