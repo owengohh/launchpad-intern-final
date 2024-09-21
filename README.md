@@ -10,6 +10,13 @@ This project is an intelligent backend system designed to facilitate seamless in
 
 The system provides a robust foundation for building sophisticated AI-powered applications while ensuring data privacy and traceability.
 
+## Deployment
+The application is currently hosted on AWS EC2 and can be accessed at:
+
+http://3.138.112.200/docs
+
+This link will take you to the Swagger UI documentation of the API, where you can explore and test the available endpoints.
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
