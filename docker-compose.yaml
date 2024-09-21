@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017
+      - MONGODB_NAME=mydatabase_5
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
